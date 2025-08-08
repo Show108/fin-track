@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --primary: #1b2528;
+  --secondary: #3a6c7b;
+  --card: #34616f;
+  --share: #468b97;
+  --tab: #4b8b97;
+  --stext: #3e7383;
+  --number: #15272d;
+  --error: #dc2626;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--primary);
+
+}
+
+/* Color utilities using your custom variables */
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-stext { color: var(--stext); }
+.text-number { color: var(--number); }
+.text-error { color: var(--error); }
+.text-tab { color: var(--tab); }
+
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-card { background-color: var(--card); }
+.bg-share { background-color: var(--share); }
+.bg-tab { background-color: var(--tab); }
+
+.border-primary { border-color: var(--primary); }
+.border-secondary { border-color: var(--secondary); }
+.border-card { border-color: var(--card); }
+.border-tab { border-color: var(--tab); }
+
+/* Hover states */
+.hover-bg-secondary:hover { background-color: var(--secondary); }
+.hover-text-tab:hover { color: var(--tab); }
+
+.font-public-sans {
+  font-family: var(--font-public-sans), sans-serif;
+}
+
+.text-heading {
+  font-family: var(--font-public-sans), sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.text-body {
+  font-family: var(--font-public-sans), sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-caption {
+  font-family: var(--font-public-sans), sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
