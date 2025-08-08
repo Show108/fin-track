@@ -30,6 +30,7 @@ const mockData: Transaction[] = [
 interface TableProps {
   searchQuery?: string
 }
+type SortableValue = string | number | Date
 
 export default function Table({ searchQuery = '' }: TableProps) {
   const [sortField, setSortField] = useState<SortField | null>(null)
@@ -135,7 +136,7 @@ export default function Table({ searchQuery = '' }: TableProps) {
       {searchQuery && (
         <div className="p-4 bg-blue-50 border-l-4 border-blue-400 mb-4">
           <p className="text-sm text-blue-700">
-            Found {filteredTransactions.length} transaction(s) matching "{searchQuery}"
+            Found {filteredTransactions.length} transaction(s) matching &ldquo;{searchQuery}&rdquo;
           </p>
         </div>
       )}

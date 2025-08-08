@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Public_Sans } from 'next/font/google'
 import "./globals.css";
-import Header from "@/components/Header";
 //import LayoutWrapper from '@/components/LayoutWrapper'
 
 export const metadata: Metadata = {
