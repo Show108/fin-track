@@ -54,9 +54,8 @@ export default function Table({ searchQuery = '' }: TableProps) {
     if (!sortField || !sortDirection) return mockData
 
     return [...mockData].sort((a, b) => {
-      let aValue: any = a[sortField]
-      let bValue: any = b[sortField]
-
+       let aValue: SortableValue = a[sortField]
+      let bValue: SortableValue = b[sortField]
       switch (sortField) {
         case 'date':
           aValue = new Date(aValue)
